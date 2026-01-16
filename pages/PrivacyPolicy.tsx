@@ -5,82 +5,73 @@ import { APP_NAME } from '../constants';
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 animate-in fade-in duration-500">
-      <div className="mb-12">
-        <h1 className="text-5xl font-black text-[#003366] mb-4">Privacy Policy</h1>
-        <div className="h-2 w-32 bg-[#76bc21]"></div>
+      <div className="mb-16">
+        <h1 className="text-5xl sm:text-7xl font-black text-[#003366] mb-4 tracking-tighter">Privacy Policy</h1>
+        <div className="h-3 w-32 bg-[#76bc21] rounded-full"></div>
       </div>
 
-      <div className="space-y-16 text-slate-600 leading-relaxed">
+      <div className="space-y-20 text-slate-600 leading-relaxed text-lg">
         <section>
-          <h2 className="text-2xl font-bold text-[#003366] mb-6">Introduction</h2>
-          <p>
-            {APP_NAME} respects your privacy and is committed to protecting it. This policy describes the types of information we may collect from you and our practices for collecting, using, and maintaining that information.
+          <h2 className="text-3xl font-black text-[#003366] mb-8 tracking-tight">Standard Commitment</h2>
+          <p className="font-light">
+            {APP_NAME} respects your privacy and is committed to protecting it. This policy describes how we collect, use, and store data when you use our website or the Daisy Service Booker Android application.
           </p>
         </section>
 
         {/* Mobile App Specific Section */}
-        <section className="p-8 bg-indigo-50/50 border border-[#003366]/10 rounded-[2.5rem]">
-          <h2 className="text-2xl font-bold text-[#003366] mb-6">Mobile App Compliance</h2>
-          <div className="space-y-4">
-            <p className="font-bold text-slate-900">For users of our Android Application:</p>
-            <ul className="space-y-4">
+        <section className="p-10 bg-[#003366]/5 border-l-8 border-[#76bc21] rounded-r-[3rem]">
+          <h2 className="text-3xl font-black text-[#003366] mb-8 tracking-tight">Mobile App Compliance (Android)</h2>
+          <div className="space-y-8">
+            <p className="font-bold text-slate-900 italic">Notice for Google Play Store Users:</p>
+            <ul className="space-y-6">
               <li className="flex items-start">
-                <div className="w-5 h-5 bg-[#76bc21] rounded flex-shrink-0 mt-1 mr-3"></div>
-                <span><strong>No Persistent Login:</strong> Our mobile app operates on a request-basis. We do not store long-term user accounts or social profiles.</span>
+                <div className="w-6 h-6 bg-[#76bc21] rounded-lg flex-shrink-0 mt-1 mr-4 flex items-center justify-center text-white font-bold text-xs">1</div>
+                <span><strong>Minimal Data Storage:</strong> Our app does not require persistent account creation. We only store temporary data necessary to fulfill your specific service booking.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-5 h-5 bg-[#76bc21] rounded flex-shrink-0 mt-1 mr-3"></div>
-                <span><strong>Device Permissions:</strong> We only request microphone and camera permissions if you choose to use the AI voice assistant or upload photos of your hardware issues.</span>
+                <div className="w-6 h-6 bg-[#76bc21] rounded-lg flex-shrink-0 mt-1 mr-4 flex items-center justify-center text-white font-bold text-xs">2</div>
+                <span><strong>Transparent Permissions:</strong> We request microphone access only for AI voice queries and camera access only for uploading photos of faulty hardware. Permissions can be revoked at any time.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-5 h-5 bg-[#76bc21] rounded flex-shrink-0 mt-1 mr-3"></div>
-                <span><strong>Data Processing:</strong> Service requests and AI interactions are processed through encrypted channels and are only used to fulfill your specific booking.</span>
+                <div className="w-6 h-6 bg-[#76bc21] rounded-lg flex-shrink-0 mt-1 mr-4 flex items-center justify-center text-white font-bold text-xs">3</div>
+                <span><strong>No Third-Party Sharing:</strong> Your service request data is never shared with third-party marketers. It stays within the Daisy Solutions secure infrastructure.</span>
               </li>
             </ul>
           </div>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-slate-50 p-8 rounded-3xl">
-            <h3 className="text-lg font-black text-[#003366] mb-4 uppercase tracking-wider">What We Collect</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-[#76bc21] rounded-full mr-3"></div> Contact Details (Booking only)</li>
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-[#76bc21] rounded-full mr-3"></div> Hardware Location</li>
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-[#76bc21] rounded-full mr-3"></div> Error Logs & Descriptions</li>
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-[#76bc21] rounded-full mr-3"></div> Device Type (Apple/Windows/Server)</li>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100">
+            <h3 className="text-xl font-black text-[#003366] mb-6 uppercase tracking-widest text-xs">What We Collect</h3>
+            <ul className="space-y-4 font-light">
+              <li className="flex items-center"><div className="w-2 h-2 bg-[#76bc21] rounded-full mr-4"></div> Name & Work Email</li>
+              <li className="flex items-center"><div className="w-2 h-2 bg-[#76bc21] rounded-full mr-4"></div> Physical Site Address</li>
+              <li className="flex items-center"><div className="w-2 h-2 bg-[#76bc21] rounded-full mr-4"></div> Hardware Serial Numbers</li>
+              <li className="flex items-center"><div className="w-2 h-2 bg-[#76bc21] rounded-full mr-4"></div> AI Chat Logs (Anonymous)</li>
             </ul>
           </div>
-          <div className="bg-slate-50 p-8 rounded-3xl">
-            <h3 className="text-lg font-black text-[#003366] mb-4 uppercase tracking-wider">What We DON'T Collect</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></div> Personal Financial Files</li>
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></div> Browsing History</li>
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></div> Contacts or Messages</li>
-              <li className="flex items-center"><div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-3"></div> Background GPS Tracking</li>
+          <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100">
+            <h3 className="text-xl font-black text-[#003366] mb-6 uppercase tracking-widest text-xs">What We NEVER Collect</h3>
+            <ul className="space-y-4 font-light">
+              <li className="flex items-center"><div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div> Credit Card Numbers</li>
+              <li className="flex items-center"><div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div> Social Media Access</li>
+              <li className="flex items-center"><div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div> Private Browser Data</li>
+              <li className="flex items-center"><div className="w-2 h-2 bg-red-500 rounded-full mr-4"></div> Passive Microphone Listening</li>
             </ul>
           </div>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-bold text-[#003366] mb-6">Data Usage</h2>
-          <p>
-            The information you provide is used exclusively to fulfill your service requests, manage your account at Daisy Solutions, and provide you with information about your services. We do not sell or rent your personal information to third parties.
+        <section className="pt-10 border-t border-slate-100">
+          <h2 className="text-3xl font-black text-[#003366] mb-6 tracking-tight">Your Rights (POPIA)</h2>
+          <p className="font-light">
+            Under the South African Protection of Personal Information Act (POPIA), you have full control over your data. You may request deletion of your service history or update your contact information by emailing our Data Officer at <span className="text-[#76bc21] font-bold">privacy@daisysolutions.co.za</span>.
           </p>
         </section>
 
-        <section className="p-8 border border-slate-100 rounded-3xl">
-          <h2 className="text-2xl font-bold text-[#003366] mb-6">Security</h2>
-          <p>
-            We implement industry-standard security measures, including encryption and secure socket layers, to protect your data during transmission. Access to your information is restricted to authorized Daisy personnel who require it to perform their professional duties.
-          </p>
-        </section>
-
-        <section>
-            <h2 className="text-2xl font-bold text-[#003366] mb-6">Your Rights</h2>
-            <p>
-                Under the Protection of Personal Information Act (POPIA), you have the right to access, correct, or request the deletion of your personal data held by us. For any such requests, please contact our Information Officer at legal@daisysolutions.co.za.
-            </p>
-        </section>
+        <div className="bg-slate-900 text-white p-12 rounded-[3rem] text-center">
+            <h3 className="text-2xl font-black mb-4">Security Infrastructure</h3>
+            <p className="text-slate-400 font-light mb-0">Our backend uses military-grade AES-256 encryption for all data at rest and during transit between your mobile device and our helpdesk systems.</p>
+        </div>
       </div>
     </div>
   );
